@@ -964,7 +964,7 @@ export default function App() {
                 </div>
               )}
 
-              <button
+              {/* <button
                 onClick={() => {
                   alert(`Thank you for your interest in ${currentProfile.name}!\n\nOur concierge team will contact you shortly to discuss your exclusive experience.`);
                 }}
@@ -995,7 +995,43 @@ export default function App() {
                 }}
               >
                 Request Experience
-              </button>
+              </button> */}
+              <button
+  onClick={() => {
+    alert(`Thank you for your interest in ${currentProfile.name}!\n\nOur concierge team will contact you shortly to discuss your exclusive experience.`);
+  }}
+  style={{
+    width: "100%",
+    padding: "14px 24px",
+    background: BUTTON_TEXT,
+    color: BUTTON_BG,
+    border: `2px solid ${BUTTON_TEXT}`,
+    borderRadius: "12px",
+    fontSize: "14px",
+    fontWeight: "600",
+    cursor: "pointer",
+    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+    fontFamily: "'Inter', -apple-system, sans-serif",
+    letterSpacing: '0.3px',
+    boxShadow: `0 8px 24px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255,255,255,0.3)`
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.transform = "translateY(-2px)";
+    e.target.style.boxShadow = `0 12px 32px rgba(255, 255, 255, 0.25), inset 0 1px 0 rgba(255,255,255,0.3)`;
+    e.target.style.background = BUTTON_BG;
+    e.target.style.color = BUTTON_TEXT;
+    e.target.style.border = `2px solid ${BUTTON_TEXT}`;
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.transform = "translateY(0)";
+    e.target.style.boxShadow = `0 8px 24px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255,255,255,0.3)`;
+    e.target.style.background = BUTTON_TEXT;
+    e.target.style.color = BUTTON_BG;
+    e.target.style.border = `2px solid ${BUTTON_TEXT}`;
+  }}
+>
+  Request Experience
+</button>
             </div>
           </div>
         )}
