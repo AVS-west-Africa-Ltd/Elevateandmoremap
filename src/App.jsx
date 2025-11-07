@@ -595,10 +595,10 @@ export default function App() {
           ref={globeEl}
           width={size[0]}
           height={size[1]}
-          backgroundColor="rgba(0,0,0,0)"
+          backgroundColor="rgba(247, 247, 247, 0)"
           
-          // Soft white minimalist globe - light luxury aesthetic
-          globeImageUrl="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23FFFFFF'/%3E%3C/svg%3E"
+          // Pure white globe - all oceans and surface white
+          globeImageUrl="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'%3E%3Crect width='2' height='2' fill='%23FFFFFF'/%3E%3C/svg%3E"
           bumpImageUrl={null}
           
           // Subtle atmosphere
