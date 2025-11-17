@@ -20,7 +20,7 @@ const SOFT_CREAM = "#F2E9DA";
 // Brand-specific colors from website
 const BUTTON_BG = "#2B3054";      // Button background
 const BUTTON_TEXT = "#FFFFFF";    // Button text (white)
-const CONTINENT_COLOR =  '#F4F4F4'//"#A6A8B7"; // Main land/continent color
+const CONTINENT_COLOR = "#A6A8B7" // "#1A1F3A" // '#F4F4F4'//"#A6A8B7"; // Main land/continent color
 const TEXT_ON_WHITE = "#A6A8B7";  // Text color on white background
 
 const locationGroups = {
@@ -32,7 +32,8 @@ const locationGroups = {
     { name: "Rome", lat: 41.9028, lng: 12.4964, size: 1.0, color: MUTED_BEIGE, id: "rome" },
     { name: "Monaco", lat: 43.7384, lng: 7.4246, size: 0.9, color: MUTED_BEIGE, id: "monaco" },
     { name: "Miami", lat: 25.7617, lng: -80.1918, size: 1.1, color: MUTED_BEIGE, id: "miami" },
-    { name: "New York", lat: 40.7128, lng: -74.006, size: 1.4, color: MUTED_BEIGE, id: "nyc" },
+  { name: "New York", lat: 40.7128, lng: -74.006, size: 1.4, color: MUTED_BEIGE, id: "nyc" },
+  { name: "Tokyo", lat: 35.6895, lng: 139.6917, size: 1.4, color: MUTED_BEIGE, id: "tokyo" },
     { name: "Las Vegas", lat: 36.1699, lng: -115.1398, size: 1.1, color: MUTED_BEIGE, id: "las-vegas" }
   ],
   winterski: [
@@ -86,6 +87,14 @@ const locationProfiles = {
     description: "The Big Apple. Financial and cultural hub of America.",
     highlights: ["Statue of Liberty", "Central Park", "Times Square"],
     image: "https://images.unsplash.com/photo-1508849789987-4e5333c12b78?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3093"
+  },
+  tokyo: {
+    name: "Tokyo",
+    country: "Japan",
+    population: "14 million",
+    description: "Vibrant megacity blending cutting-edge technology, tranquil temples and world-class dining.",
+    highlights: ["Shibuya Crossing", "Senso-ji Temple", "Tokyo Tower"],
+    image: "https://images.unsplash.com/photo-1549693578-d683be217e58?w=900&h=600&fit=crop"
   },
   miami: {
     name: "Miami",
@@ -290,7 +299,7 @@ export default function App() {
     const avgLat = cityLocations.reduce((sum, loc) => sum + loc.lat, 0) / cityLocations.length;
     const avgLng = cityLocations.reduce((sum, loc) => sum + loc.lng, 0) / cityLocations.length;
     
-    globeEl.current.pointOfView({ lat: avgLat, lng: avgLng, altitude: 1.5 }, 1000);
+    globeEl.current.pointOfView({ lat: avgLat, lng: avgLng, altitude: size[0] < 768 ? 2.0 : 1.5 }, 1000);
   }, []);
 
   React.useLayoutEffect(() => {
@@ -372,6 +381,8 @@ export default function App() {
         image: 'https://images.unsplash.com/photo-1503264116251-35a269479413?w=900&h=600&fit=crop'
       })
     : null;
+
+
 
   return (
     <div
@@ -471,101 +482,259 @@ export default function App() {
         ))}
       </div>
 
-      {/* Premium Header Card - Bottom Left with Glass Effect */}
+      {/* Premium Header Card - Responsive positioning */}
       <div style={{
         position: 'fixed',
-        bottom: '32px',
-        left: '32px',
-        maxWidth: '380px',
+        bottom: size[0] < 768 ? '16px' : '32px',
+        left: size[0] < 768 ? '16px' : '32px',
+        right: size[0] < 768 ? '16px' : 'auto',
+        maxWidth: size[0] < 768 ? 'none' : '380px',
+        width: size[0] < 768 ? 'auto' : 'auto',
         zIndex: 100,
-        background: `linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 247, 243, 0.92))`,
-        backdropFilter: 'blur(30px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(30px) saturate(180%)',
-        borderRadius: '20px',
-        padding: '28px',
-        border: `1px solid ${LIGHT_GREY_BORDER}`,
-        boxShadow: `
-          0 8px 32px rgba(0, 0, 0, 0.06),
-          0 0 0 1px rgba(199, 199, 199, 0.2),
-          inset 0 1px 0 rgba(255, 255, 255, 0.8)
-        `,
+        background: size[0] < 768 
+          ? 'rgba(255, 255, 255, 0.12)'
+          : `linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 247, 243, 0.92))`,
+        backdropFilter: size[0] < 768 ? 'blur(20px) saturate(180%)' : 'blur(30px) saturate(180%)',
+        WebkitBackdropFilter: size[0] < 768 ? 'blur(20px) saturate(180%)' : 'blur(30px) saturate(180%)',
+        borderRadius: size[0] < 768 ? '12px' : '20px',
+        padding: size[0] < 768 ? '12px' : '28px',
+        border: size[0] < 768 ? '1px solid rgba(255, 255, 255, 0.3)' : `1px solid ${LIGHT_GREY_BORDER}`,
+        boxShadow: size[0] < 768 
+          ? '0 4px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+          : `0 8px 32px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(199, 199, 199, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8)`,
         textAlign: 'left'
       }}>
-        {/* Brand logo/tagline */}
-        <div style={{
-          display: 'inline-block',
-          marginBottom: '16px',
-          padding: '6px 16px',
-          background: `linear-gradient(135deg, ${SOFT_CREAM}, ${LIGHT_CREAM})`,
-          borderRadius: '100px',
-          border: `1px solid ${LIGHT_GREY_BORDER}`,
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)'
-        }}>
-          <span style={{
-            fontSize: '10px',
-            fontWeight: '700',
-            color: DARK_GREY_TEXT,
-            letterSpacing: '2.5px',
-            textTransform: 'uppercase'
-          }}>Elevate & More</span>
-        </div>
+        {/* Brand logo/tagline - Hidden on mobile */}
+        {size[0] >= 768 && (
+          <div style={{
+            display: 'inline-block',
+            marginBottom: '16px',
+            padding: '6px 16px',
+            background: `linear-gradient(135deg, ${SOFT_CREAM}, ${LIGHT_CREAM})`,
+            borderRadius: '100px',
+            border: `1px solid ${LIGHT_GREY_BORDER}`,
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)'
+          }}>
+            <span style={{
+              fontSize: '10px',
+              fontWeight: '700',
+              color: DARK_GREY_TEXT,
+              letterSpacing: '2.5px',
+              textTransform: 'uppercase'
+            }}>Elevate & More</span>
+          </div>
+        )}
 
         <h1 style={{
-          fontSize: "clamp(24px, 2.5vw, 34px)",
-          fontWeight: "600",
+          fontSize: size[0] < 768 ? "14px" : "clamp(24px, 2.5vw, 34px)",
+          fontWeight: size[0] < 768 ? "700" : "600",
           fontFamily: "'Inter', -apple-system, sans-serif",
-          margin: "0 0 10px 0",
-          color: DARK_GREY_TEXT,
-          letterSpacing: "-0.5px",
-          lineHeight: "1.2"
+          margin: size[0] < 768 ? "0 0 8px 0" : "0 0 10px 0",
+          color: size[0] < 768 ? '#2D2F55' : DARK_GREY_TEXT,
+          letterSpacing: size[0] < 768 ? "0.2px" : "-0.5px",
+          lineHeight: size[0] < 768 ? "1.3" : "1.2",
+          textShadow: size[0] < 768 ? 'none' : 'none'
         }}>
-          Exclusive Global
-          <br />
-          <span style={{
-            background: `linear-gradient(135deg, ${MUTED_BEIGE}, ${SOFT_GOLD})`,
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            fontWeight: '700'
-          }}>Destinations</span>
+          {size[0] < 768 ? (
+            <>Elevate & More<br />Exclusive Global Destinations</>
+          ) : (
+            <>
+              Exclusive Global
+              <br />
+              <span style={{
+                background: `linear-gradient(135deg, ${MUTED_BEIGE}, ${SOFT_GOLD})`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontWeight: '700'
+              }}>Destinations</span>
+            </>
+          )}
         </h1>
         
-        <p style={{
-          fontSize: "13px",
-          color: "rgba(43, 43, 43, 0.75)",
-          margin: "0 0 20px 0",
-          lineHeight: "1.6",
-          fontWeight: '500',
-          letterSpacing: '0.3px'
-        }}>
-          Unlock access to the world's most extraordinary experiences
-        </p>
+        {/* Description - Hidden on mobile */}
+        {size[0] >= 768 && (
+          <p style={{
+            fontSize: "13px",
+            color: "rgba(43, 43, 43, 0.75)",
+            margin: "0 0 20px 0",
+            lineHeight: "1.6",
+            fontWeight: '500',
+            letterSpacing: '0.3px'
+          }}>
+            Unlock access to the world's most extraordinary experiences
+          </p>
+        )}
 
         <div style={{ 
           display: "flex", 
-          flexDirection: "column",
-          gap: "8px"
+          flexDirection: size[0] < 768 ? "row" : "column",
+          gap: size[0] < 768 ? "6px" : "8px",
+          flexWrap: size[0] < 768 ? "wrap" : "nowrap",
+          justifyContent: size[0] < 768 ? "center" : "flex-start"
         }}>
           <button 
-            style={getButtonStyle('cities')} 
+            style={{
+              ...getButtonStyle('cities'),
+              padding: size[0] < 768 ? '6px 10px' : '13px 20px',
+              fontSize: size[0] < 768 ? '11px' : '13px',
+              flex: size[0] < 768 ? '0 1 auto' : 'none',
+              minWidth: size[0] < 768 ? 'auto' : 'auto',
+              background: size[0] < 768 
+                ? (activeFilter === 'cities' ? 'rgba(45, 47, 85, 0.15)' : 'rgba(255, 255, 255, 0.15)')
+                : (activeFilter === 'cities' ? BUTTON_BG : 'rgba(255, 255, 255, 0.6)'),
+              color: size[0] < 768 ? '#2D2F55' : (activeFilter === 'cities' ? '#858484ff' : '#2B2B2B'),
+              border: size[0] < 768 
+                ? (activeFilter === 'cities' ? '1px solid #2D2F55' : '1px solid rgba(45, 47, 85, 0.3)')
+                : (activeFilter === 'cities' ? `2px solid ${BUTTON_BG}` : `1px solid ${LIGHT_GREY_BORDER}`),
+              boxShadow: size[0] < 768
+                ? (activeFilter === 'cities' ? '0 2px 12px rgba(45, 47, 85, 0.25)' : '0 2px 8px rgba(0,0,0,0.1)')
+                : (activeFilter === 'cities' ? `0 4px 20px rgba(43, 48, 84, 0.3), inset 0 1px 0 rgba(255,255,255,0.15)` : '0 2px 8px rgba(0,0,0,0.04)'),
+              fontWeight: size[0] < 768 ? '600' : '600'
+            }}
             onClick={() => handleFilterClick('cities')}
           >
-            Metropolitan
+            {size[0] < 768 ? '🏙️Metropolitan' : 'Metropolitan'}
           </button>
           <button 
-            style={getButtonStyle('winterski')} 
+            style={{
+              ...getButtonStyle('winterski'),
+              padding: size[0] < 768 ? '6px 10px' : '13px 20px',
+              fontSize: size[0] < 768 ? '11px' : '13px',
+              flex: size[0] < 768 ? '0 1 auto' : 'none',
+              minWidth: size[0] < 768 ? 'auto' : 'auto',
+              background: size[0] < 768 
+                ? (activeFilter === 'winterski' ? 'rgba(45, 47, 85, 0.15)' : 'rgba(255, 255, 255, 0.15)')
+                : (activeFilter === 'winterski' ? BUTTON_BG : 'rgba(255, 255, 255, 0.6)'),
+              color: size[0] < 768 ? '#2D2F55' : (activeFilter === 'winterski' ? '#858484ff' : '#2B2B2B'),
+              border: size[0] < 768 
+                ? (activeFilter === 'winterski' ? '1px solid #2D2F55' : '1px solid rgba(45, 47, 85, 0.3)')
+                : (activeFilter === 'winterski' ? `2px solid ${BUTTON_BG}` : `1px solid ${LIGHT_GREY_BORDER}`),
+              boxShadow: size[0] < 768
+                ? (activeFilter === 'winterski' ? '0 2px 12px rgba(45, 47, 85, 0.25)' : '0 2px 8px rgba(0,0,0,0.1)')
+                : (activeFilter === 'winterski' ? `0 4px 20px rgba(43, 48, 84, 0.3), inset 0 1px 0 rgba(255,255,255,0.15)` : '0 2px 8px rgba(0,0,0,0.04)'),
+              fontWeight: size[0] < 768 ? '600' : '600'
+            }}
             onClick={() => handleFilterClick('winterski')}
           >
-            Alpine Retreats
+            {size[0] < 768 ? '⛷️ Alpine Retreats' : 'Alpine Retreats'}
           </button>
           <button 
-            style={getButtonStyle('islandBeach')} 
+            style={{
+              ...getButtonStyle('islandBeach'),
+              padding: size[0] < 768 ? '6px 10px' : '13px 20px',
+              fontSize: size[0] < 768 ? '11px' : '13px',
+              flex: size[0] < 768 ? '0 1 auto' : 'none',
+              minWidth: size[0] < 768 ? 'auto' : 'auto',
+              background: size[0] < 768 
+                ? (activeFilter === 'islandBeach' ? 'rgba(45, 47, 85, 0.15)' : 'rgba(255, 255, 255, 0.15)')
+                : (activeFilter === 'islandBeach' ? BUTTON_BG : 'rgba(255, 255, 255, 0.6)'),
+              color: size[0] < 768 ? '#2D2F55' : (activeFilter === 'islandBeach' ? '#858484ff' : '#2B2B2B'),
+              border: size[0] < 768 
+                ? (activeFilter === 'islandBeach' ? '1px solid #2D2F55' : '1px solid rgba(45, 47, 85, 0.3)')
+                : (activeFilter === 'islandBeach' ? `2px solid ${BUTTON_BG}` : `1px solid ${LIGHT_GREY_BORDER}`),
+              boxShadow: size[0] < 768
+                ? (activeFilter === 'islandBeach' ? '0 2px 12px rgba(45, 47, 85, 0.25)' : '0 2px 8px rgba(0,0,0,0.1)')
+                : (activeFilter === 'islandBeach' ? `0 4px 20px rgba(43, 48, 84, 0.3), inset 0 1px 0 rgba(255,255,255,0.15)` : '0 2px 8px rgba(0,0,0,0.04)'),
+              fontWeight: size[0] < 768 ? '600' : '600'
+            }}
             onClick={() => handleFilterClick('islandBeach')}
           >
-            Coastal Paradises
+            {size[0] < 768 ? '🏝️ Coastal Paradises' : 'Coastal Paradises'}
           </button>
         </div>
+      </div>
+
+      {/* Glass Info Card - Top Right (Desktop) / Top Center Horizontal (Mobile) */}
+      <div style={{
+        position: 'fixed',
+        top: size[0] < 768 ? '16px' : '20px',
+        left: size[0] < 768 ? '55%' : 'auto',
+        right: size[0] < 768 ? 'auto' : '20px',
+        transform: size[0] < 768 ? 'translateX(-50%)' : 'none',
+        maxWidth: size[0] < 768 ? 'calc(100vw - 90px)' : '240px',
+        maxHeight: size[0] < 768 ? 'none' : '60vh',
+        overflowX: size[0] < 768 ? 'scroll' : 'visible',
+        overflowY: size[0] < 768 ? 'visible' : 'auto',
+        zIndex: 100,
+        background: 'rgba(255, 255, 255, 0.08)',
+        backdropFilter: 'blur(20px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+        borderRadius: size[0] < 768 ? '10px' : '12px',
+        padding: size[0] < 768 ? '8px 12px' : '14px 16px',
+        border: '1px solid rgba(255, 255, 255, 0.25)',
+        boxShadow: '0 4px 24px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.15)',
+        textAlign: 'left'
+      }}>
+        {/* Heading - Hidden on mobile */}
+        {size[0] >= 768 && (
+          <h3 style={{
+            margin: '0 0 10px 0',
+            fontSize: '12px',
+            fontWeight: '700',
+            color: '#2D2F55',
+            letterSpacing: '1px',
+            textTransform: 'uppercase',
+            fontFamily: "'Inter', -apple-system, sans-serif",
+            borderBottom: '1px solid rgba(45, 47, 85, 0.15)',
+            paddingBottom: '8px'
+          }}>
+            {activeFilter === 'cities' ? 'Metropolitan' : activeFilter === 'winterski' ? 'Alpine Retreats' : 'Coastal Paradises'}
+          </h3>
+        )}
+
+        {/* Location List */}
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: size[0] < 768 ? 'row' : 'column', 
+          gap: size[0] < 768 ? '6px' : '4px',
+          alignItems: size[0] < 768 ? 'center' : 'stretch',
+          flexWrap: size[0] < 768 ? 'nowrap' : 'wrap'
+        }}>
+          {locationGroups[activeFilter].map((location) => (
+            <button
+              key={location.id}
+              onClick={() => handleLocationSelect(location)}
+              style={{
+                background: selected?.id === location.id 
+                  ? 'rgba(45, 47, 85, 0.2)' 
+                  : 'rgba(255, 255, 255, 0.05)',
+                border: selected?.id === location.id 
+                  ? '1px solid rgba(45, 47, 85, 0.4)' 
+                  : '1px solid rgba(255, 255, 255, 0.15)',
+                borderRadius: '6px',
+                padding: size[0] < 768 ? '6px 10px' : '8px 10px',
+                fontSize: size[0] < 768 ? '9px' : '11px',
+                fontWeight: selected?.id === location.id ? '600' : '500',
+                color: '#2D2F55',
+                textAlign: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                fontFamily: "'Inter', -apple-system, sans-serif",
+                display: 'block',
+                width: size[0] < 768 ? 'auto' : '100%',
+                whiteSpace: 'nowrap',
+                flexShrink: 0
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = 'rgba(45, 47, 85, 0.15)';
+                e.target.style.transform = size[0] < 768 ? 'translateY(-2px)' : 'translateX(2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = selected?.id === location.id 
+                  ? 'rgba(45, 47, 85, 0.2)' 
+                  : 'rgba(255, 255, 255, 0.05)';
+                e.target.style.transform = size[0] < 768 ? 'translateY(0)' : 'translateX(0)';
+              }}
+            >
+              {location.name}
+            </button>
+          ))}
+        </div>
+        
+
+
       </div>
 
       <div style={{
@@ -598,7 +767,7 @@ export default function App() {
           backgroundColor="rgba(247, 247, 247, 0)"
           
           // Pure white globe - all oceans and surface white
-          globeImageUrl="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'%3E%3Crect width='2' height='2' fill='%23FFFFFF'/%3E%3C/svg%3E"
+          globeImageUrl="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'%3E%3Crect width='2' height='2' fill='%23F9F5F1'/%3E%3C/svg%3E"
           bumpImageUrl={null}
           
           // Subtle atmosphere
@@ -747,11 +916,11 @@ export default function App() {
         
         <div style={{
           position: "absolute",
-          top: "20px",
-          left: "20px",
+          top: size[0] < 768 ? "10px" : "20px",
+          left: size[0] < 768 ? "10px" : "20px",
           display: "flex",
           flexDirection: "column",
-          gap: "10px",
+          gap: size[0] < 768 ? "8px" : "10px",
           zIndex: 10
         }}>
           <button
@@ -798,13 +967,13 @@ export default function App() {
               }
             }}
             style={{
-              width: "42px",
-              height: "42px",
+              width: size[0] < 768 ? "36px" : "42px",
+              height: size[0] < 768 ? "36px" : "42px",
               background: BUTTON_BG,
               border: `1px solid ${BUTTON_BG}`,
-              borderRadius: "12px",
+              borderRadius: size[0] < 768 ? "10px" : "12px",
               cursor: "pointer",
-              fontSize: "20px",
+              fontSize: size[0] < 768 ? "18px" : "20px",
               fontWeight: "300",
               color: BUTTON_TEXT,
               display: "flex",
@@ -831,16 +1000,17 @@ export default function App() {
         {selected && currentProfile && (
           <div style={{
             position: "absolute",
-            top: `${popupPosition.y}px`,
-            left: `${popupPosition.x}px`,
+            top: size[0] < 768 ? "50%" : `${popupPosition.y}px`,
+            left: size[0] < 768 ? "50%" : `${popupPosition.x}px`,
+            transform: size[0] < 768 ? "translate(-50%, -50%)" : "none",
             background: BUTTON_BG,
-            borderRadius: "16px",
+            borderRadius: size[0] < 768 ? "12px" : "16px",
             padding: "0",
             boxShadow: `0 24px 64px rgba(43, 48, 84, 0.4), 0 0 0 1px rgba(255,255,255,0.1), inset 0 1px 0 rgba(255,255,255,0.05)`,
-            maxWidth: "360px",
-            width: "360px",
+            maxWidth: size[0] < 768 ? "calc(100vw - 32px)" : "360px",
+            width: size[0] < 768 ? "calc(100vw - 32px)" : "360px",
             zIndex: 1000,
-            maxHeight: "480px",
+            maxHeight: size[0] < 768 ? "calc(100vh - 32px)" : "480px",
             overflow: "hidden",
             backdropFilter: "blur(40px)",
             WebkitBackdropFilter: "blur(40px)",
@@ -885,8 +1055,8 @@ export default function App() {
 
             <div style={{
               width: "100%",
-              height: "160px",
-              borderRadius: "16px 16px 0 0",
+              height: size[0] < 768 ? "120px" : "160px",
+              borderRadius: size[0] < 768 ? "12px 12px 0 0" : "16px 16px 0 0",
               background: `url(${currentProfile.image}) center/cover`,
               position: 'relative',
               overflow: 'hidden'
@@ -898,10 +1068,10 @@ export default function App() {
               }} />
             </div>
 
-            <div style={{ padding: "24px" }}>
+            <div style={{ padding: size[0] < 768 ? "14px 16px" : "24px" }}>
               <h3 style={{ 
                 margin: "0 0 6px 0", 
-                fontSize: "22px",
+                fontSize: size[0] < 768 ? "18px" : "22px",
                 color: BUTTON_TEXT,
                 fontWeight: "500",
                 letterSpacing: '-0.3px'
@@ -911,7 +1081,7 @@ export default function App() {
               
               <p style={{ 
                 margin: "0 0 16px 0", 
-                fontSize: "12px",
+                fontSize: size[0] < 768 ? "11px" : "12px",
                 color: MUTED_BEIGE,
                 fontWeight: '500',
                 letterSpacing: '0.5px',
@@ -920,17 +1090,21 @@ export default function App() {
                 {currentProfile.country} {currentProfile.population && `· ${currentProfile.population}`}
               </p>
               
-              <p style={{ 
-                margin: "0 0 20px 0", 
-                fontSize: "14px",
-                color: "rgba(255,255,255,0.85)",
-                lineHeight: "1.6",
-                letterSpacing: '0.1px'
-              }}>
-                {currentProfile.description}
-              </p>
+              {/* Hide description on mobile */}
+              {size[0] >= 768 && (
+                <p style={{ 
+                  margin: "0 0 16px 0", 
+                  fontSize: "14px",
+                  color: "rgba(255,255,255,0.85)",
+                  lineHeight: "1.6",
+                  letterSpacing: '0.1px'
+                }}>
+                  {currentProfile.description}
+                </p>
+              )}
               
-              {currentProfile.highlights && currentProfile.highlights.length > 0 && (
+              {/* Hide highlights on mobile */}
+              {size[0] >= 768 && currentProfile.highlights && currentProfile.highlights.length > 0 && (
                 <div style={{ marginBottom: "20px" }}>
                   <h4 style={{ 
                     margin: "0 0 12px 0",
@@ -1002,12 +1176,12 @@ export default function App() {
   }}
   style={{
     width: "100%",
-    padding: "14px 24px",
+    padding: size[0] < 768 ? "12px 20px" : "14px 24px",
     background: BUTTON_TEXT,
     color: BUTTON_BG,
     border: `2px solid ${BUTTON_TEXT}`,
-    borderRadius: "12px",
-    fontSize: "14px",
+    borderRadius: size[0] < 768 ? "10px" : "12px",
+    fontSize: size[0] < 768 ? "13px" : "14px",
     fontWeight: "600",
     cursor: "pointer",
     transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
