@@ -952,14 +952,14 @@ export default function App() {
               }
             }}
             style={{
-              width: "42px",
-              height: "42px",
+              width: size[0] < 768 ? "36px" : "42px",
+              height: size[0] < 768 ? "36px" : "42px",
               background: BUTTON_BG,
               border: `1px solid ${BUTTON_BG}`,
-              borderRadius: "12px",
-              cursor: "pointer",
-              fontSize: "20px",
               fontWeight: "300",
+               borderRadius: size[0] < 768 ? "10px" : "12px",
+              cursor: "pointer",
+              fontSize: size[0] < 768 ? "18px" : "20px",
               color: BUTTON_TEXT,
               display: "flex",
               alignItems: "center",
@@ -970,7 +970,7 @@ export default function App() {
               transition: 'all 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.transform = 'translateY(-1px)';
               e.target.style.boxShadow = `0 8px 24px rgba(43, 48, 84, 0.35)`;
             }}
             onMouseLeave={(e) => {
@@ -1006,7 +1006,7 @@ export default function App() {
               transition: 'all 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.transform = 'translateY(-1px)';
               e.target.style.boxShadow = `0 8px 24px rgba(43, 48, 84, 0.35)`;
             }}
             onMouseLeave={(e) => {
