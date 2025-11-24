@@ -9,7 +9,7 @@ const BRAND_DARK = "#1A1F3A";
 
 // Light luxury palette
 const LIGHT_CREAM = "#F5F0E9";
-const SOFT_WHITE =  "#F9F6F1"  //"#FFFFFF";
+const SOFT_WHITE =   " #F5F0E9"//"#F9F6F1"  //"#FFFFFF";
 const LIGHT_GREY_BORDER = "#C7C7C7";
 const MUTED_BEIGE = "#D6C6A8";
 const SOFT_GOLD = "#CBBFAF";
