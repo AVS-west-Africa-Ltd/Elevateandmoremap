@@ -356,7 +356,7 @@ export default function App() {
         minHeight: "100vh",
         overflow: "auto",
         width: "100vw",
-        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+        fontFamily: "'Nobel', -apple-system, BlinkMacSystemFont, sans-serif",
         backgroundColor: '#000000'
       }}
     >
@@ -683,7 +683,7 @@ export default function App() {
                 border-radius: 8px;
                 font-size: 11px;
                 font-weight: 600;
-                font-family: 'Inter', -apple-system, sans-serif;
+                font-family: 'Nobel', -apple-system, sans-serif;
                 white-space: nowrap;
                 pointer-events: none;
                 box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(100, 140, 180, 0.2);

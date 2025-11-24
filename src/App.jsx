@@ -353,7 +353,7 @@ export default function App() {
     borderRadius: '12px',
     fontSize: '13px',
     fontWeight: '600',
-    fontFamily: "'Inter', -apple-system, sans-serif",
+    fontFamily: "'Nobel', -apple-system, sans-serif",
     cursor: 'pointer',
     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
     background: activeFilter === filter 
@@ -396,7 +396,7 @@ export default function App() {
         minHeight: "100vh",
         overflow: "auto",
         width: "100vw",
-        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+        fontFamily: "'Nobel','Inter', -apple-system, BlinkMacSystemFont, sans-serif",
         backgroundColor: "#F5F0E9"
       }}
     >
@@ -529,7 +529,7 @@ export default function App() {
         <h1 style={{
           fontSize: size[0] < 768 ? "14px" : "clamp(24px, 2.5vw, 34px)",
           fontWeight: size[0] < 768 ? "700" : "600",
-          fontFamily: "'Inter', -apple-system, sans-serif",
+          fontFamily: "'Nobel', -apple-system, sans-serif",
           margin: size[0] < 768 ? "0 0 8px 0" : "0 0 10px 0",
           color: size[0] < 768 ? '#03041bff' : DARK_GREY_TEXT,
           letterSpacing: size[0] < 768 ? "0.2px" : "-0.5px",
@@ -676,7 +676,7 @@ export default function App() {
             color: '#2D2F55',
             letterSpacing: '1px',
             textTransform: 'uppercase',
-            fontFamily: "'Inter', -apple-system, sans-serif",
+            fontFamily: "'Nobel',Inter', -apple-system, sans-serif",
             borderBottom: '1px solid rgba(45, 47, 85, 0.15)',
             paddingBottom: '8px'
           }}>
@@ -711,7 +711,7 @@ export default function App() {
                 textAlign: 'center',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
-                fontFamily: "'Inter', -apple-system, sans-serif",
+                fontFamily: "'Nobel', -apple-system, sans-serif",
                 display: 'block',
                 width: size[0] < 768 ? 'auto' : '100%',
                 whiteSpace: 'nowrap',
@@ -860,7 +860,7 @@ export default function App() {
                 border-radius: 6px;
                 font-size: 12px;
                 font-weight: 600;
-                font-family: 'Inter', -apple-system, sans-serif;
+                font-family: 'Nobel', -apple-system, sans-serif;
                 white-space: nowrap;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
                 border: 1px solid ${LIGHT_GREY_BORDER};
@@ -1190,7 +1190,7 @@ export default function App() {
     fontWeight: "600",
     cursor: "pointer",
     transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-    fontFamily: "'Inter', -apple-system, sans-serif",
+    fontFamily: "'Nobel', -apple-system, sans-serif",
     letterSpacing: '0.3px',
     boxShadow: `0 8px 24px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255,255,255,0.3)`
   }}

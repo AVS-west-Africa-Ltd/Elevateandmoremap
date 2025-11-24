@@ -1,18 +1,71 @@
 /* Premium Global Styles for Elevate & More */
+
+/* Nobel Font from Shopify CDN */
+/* ✅ MUST be at the very top: @font-face for Nobel */
+@font-face {
+  font-family: 'Nobel';
+  src: url('https://cdn.shopify.com/s/files/1/0871/3971/3358/files/nobel-2.otf?v=1730972318') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nobel';
+  src: url('https://cdn.shopify.com/s/files/1/0871/3971/3358/files/nobel-5.ttf?v=1730972386') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ✅ Google Fonts @import — must come AFTER @font-face but BEFORE any other CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ✅ Now your global reset & styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-#root {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+/* ✅ Apply Nobel to the body — this is critical */
+body {
+  font-family: 'Nobel', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  color: rgba(43, 43, 43, 0.9);
+  background-color: #FFFFFF;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
+
+/* Optional: ensure #root inherits font */
+#root {
+  font-family: inherit;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Rest of your premium styles (scrollbar, animations, etc.) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* ... your other styles ... */
+:root {
+  font-family: 'Nobel', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+/* 
+#root {
+  font-family:  'Nobel', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+} */
 
 /* Smooth scrollbar styling */
 ::-webkit-scrollbar {
