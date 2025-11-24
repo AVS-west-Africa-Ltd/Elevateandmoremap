@@ -9,7 +9,7 @@ const BRAND_DARK = "#1A1F3A";
 
 // Light luxury palette
 const LIGHT_CREAM = "#F5F0E9";
-const SOFT_WHITE = "#FFFFFF";
+const SOFT_WHITE =  "#F9F6F1"  //"#FFFFFF";
 const LIGHT_GREY_BORDER = "#C7C7C7";
 const MUTED_BEIGE = "#D6C6A8";
 const SOFT_GOLD = "#CBBFAF";
@@ -387,11 +387,11 @@ export default function App() {
   return (
     <div
       style={{
-        background: `
-          radial-gradient(ellipse at 20% 0%, ${LIGHT_CREAM} 0%, transparent 50%),
-          radial-gradient(ellipse at 80% 100%, ${SOFT_CREAM} 0%, transparent 50%),
-          radial-gradient(circle at 50% 50%, ${SOFT_WHITE} 0%, ${LIGHT_CREAM} 100%)
-        `,
+        // background: `
+        //   radial-gradient(ellipse at 20% 0%, ${LIGHT_CREAM} 0%, transparent 50%),
+        //   radial-gradient(ellipse at 80% 100%, ${SOFT_CREAM} 0%, transparent 50%),
+        //   radial-gradient(circle at 50% 50%, ${SOFT_WHITE} 0%, ${LIGHT_CREAM} 100%)
+        // `,
         position: "relative",
         minHeight: "100vh",
         overflow: "auto",
@@ -764,10 +764,10 @@ export default function App() {
           ref={globeEl}
           width={size[0]}
           height={size[1]}
-          backgroundColor="rgba(247, 247, 247, 0)"
+          backgroundColor="rgba(248, 245, 241, 1)"
           
-          // Pure white globe - all oceans and surface white
-          globeImageUrl="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'%3E%3Crect width='2' height='2' fill='%23F9F5F1'/%3E%3C/svg%3E"
+          // Ocean matches background #F8F5F1 for seamless blend
+          globeImageUrl="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'%3E%3Crect width='2' height='2' fill='%231A1F3A'/%3E%3C/svg%3E"
           bumpImageUrl={null}
           
           // Subtle atmosphere
