@@ -299,7 +299,7 @@ export default function App() {
     const avgLat = cityLocations.reduce((sum, loc) => sum + loc.lat, 0) / cityLocations.length;
     const avgLng = cityLocations.reduce((sum, loc) => sum + loc.lng, 0) / cityLocations.length;
     
-    globeEl.current.pointOfView({ lat: avgLat, lng: avgLng, altitude: size[0] < 768 ? 2.0 : 1.5 }, 1000);
+    globeEl.current.pointOfView({ lat: avgLat, lng: avgLng, altitude: size[0] < 768 ? 3.5 : 1.5 }, 1000);
   }, []);
 
   React.useLayoutEffect(() => {
@@ -531,7 +531,7 @@ export default function App() {
           fontWeight: size[0] < 768 ? "700" : "600",
           fontFamily: "'Inter', -apple-system, sans-serif",
           margin: size[0] < 768 ? "0 0 8px 0" : "0 0 10px 0",
-          color: size[0] < 768 ? '#2D2F55' : DARK_GREY_TEXT,
+          color: size[0] < 768 ? '#03041bff' : DARK_GREY_TEXT,
           letterSpacing: size[0] < 768 ? "0.2px" : "-0.5px",
           lineHeight: size[0] < 768 ? "1.3" : "1.2",
           textShadow: size[0] < 768 ? 'none' : 'none'
@@ -584,9 +584,9 @@ export default function App() {
               background: size[0] < 768 
                 ? (activeFilter === 'cities' ? 'rgba(45, 47, 85, 0.15)' : 'rgba(255, 255, 255, 0.15)')
                 : (activeFilter === 'cities' ? BUTTON_BG : 'rgba(255, 255, 255, 0.6)'),
-              color: size[0] < 768 ? '#2D2F55' : (activeFilter === 'cities' ? '#858484ff' : '#2B2B2B'),
+              color: size[0] < 768 ? '#03041bff' : (activeFilter === 'cities' ? '#858484ff' : '#2B2B2B'),
               border: size[0] < 768 
-                ? (activeFilter === 'cities' ? '1px solid #2D2F55' : '1px solid rgba(45, 47, 85, 0.3)')
+                ? (activeFilter === 'cities' ? '1px solid #03041bff' : '1px solid rgba(45, 47, 85, 0.3)')
                 : (activeFilter === 'cities' ? `2px solid ${BUTTON_BG}` : `1px solid ${LIGHT_GREY_BORDER}`),
               boxShadow: size[0] < 768
                 ? (activeFilter === 'cities' ? '0 2px 12px rgba(45, 47, 85, 0.25)' : '0 2px 8px rgba(0,0,0,0.1)')
@@ -607,9 +607,9 @@ export default function App() {
               background: size[0] < 768 
                 ? (activeFilter === 'winterski' ? 'rgba(45, 47, 85, 0.15)' : 'rgba(255, 255, 255, 0.15)')
                 : (activeFilter === 'winterski' ? BUTTON_BG : 'rgba(255, 255, 255, 0.6)'),
-              color: size[0] < 768 ? '#2D2F55' : (activeFilter === 'winterski' ? '#858484ff' : '#2B2B2B'),
+              color: size[0] < 768 ? '#03041bff' : (activeFilter === 'winterski' ? '#858484ff' : '#2B2B2B'),
               border: size[0] < 768 
-                ? (activeFilter === 'winterski' ? '1px solid #2D2F55' : '1px solid rgba(45, 47, 85, 0.3)')
+                ? (activeFilter === 'winterski' ? '1px solid #03041bff' : '1px solid rgba(45, 47, 85, 0.3)')
                 : (activeFilter === 'winterski' ? `2px solid ${BUTTON_BG}` : `1px solid ${LIGHT_GREY_BORDER}`),
               boxShadow: size[0] < 768
                 ? (activeFilter === 'winterski' ? '0 2px 12px rgba(45, 47, 85, 0.25)' : '0 2px 8px rgba(0,0,0,0.1)')
@@ -630,9 +630,9 @@ export default function App() {
               background: size[0] < 768 
                 ? (activeFilter === 'islandBeach' ? 'rgba(45, 47, 85, 0.15)' : 'rgba(255, 255, 255, 0.15)')
                 : (activeFilter === 'islandBeach' ? BUTTON_BG : 'rgba(255, 255, 255, 0.6)'),
-              color: size[0] < 768 ? '#2D2F55' : (activeFilter === 'islandBeach' ? '#858484ff' : '#2B2B2B'),
+              color: size[0] < 768 ? '#03041bff' : (activeFilter === 'islandBeach' ? '#858484ff' : '#2B2B2B'),
               border: size[0] < 768 
-                ? (activeFilter === 'islandBeach' ? '1px solid #2D2F55' : '1px solid rgba(45, 47, 85, 0.3)')
+                ? (activeFilter === 'islandBeach' ? '1px solid #03041bff' : '1px solid rgba(45, 47, 85, 0.3)')
                 : (activeFilter === 'islandBeach' ? `2px solid ${BUTTON_BG}` : `1px solid ${LIGHT_GREY_BORDER}`),
               boxShadow: size[0] < 768
                 ? (activeFilter === 'islandBeach' ? '0 2px 12px rgba(45, 47, 85, 0.25)' : '0 2px 8px rgba(0,0,0,0.1)')
