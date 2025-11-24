@@ -1171,9 +1171,14 @@ export default function App() {
                 Request Experience
               </button> */}
               <button
+  // onClick={() => {
+  //   alert(`Thank you for your interest in ${currentProfile.name}!\n\nOur concierge team will contact you shortly to discuss your exclusive experience. https://www.elevateandmore.com/pages/contact`);
+  // }}
+
   onClick={() => {
-    alert(`Thank you for your interest in ${currentProfile.name}!\n\nOur concierge team will contact you shortly to discuss your exclusive experience.`);
-  }}
+  window.location.href = "https://www.elevateandmore.com/pages/contact";
+}}
+
   style={{
     width: "100%",
     padding: size[0] < 768 ? "12px 20px" : "14px 24px",
@@ -1204,7 +1209,7 @@ export default function App() {
     e.target.style.border = `2px solid ${BUTTON_TEXT}`;
   }}
 >
-  Request Experience
+  Contact Us Today
 </button>
             </div>
           </div>
