@@ -45,11 +45,11 @@ const HeroGlobeSection = () => {
     paris: {
       name: 'Paris',
       country: 'France',
-      population: '2.1 million',
+      // population: '2.1 million',
       description: "The 'City of Light'. Home to the Eiffel Tower, Louvre and timeless streets.",
       highlights: ['Eiffel Tower', 'Louvre Museum', 'Notre-Dame'],
       funFacts: ['Famous for cafés and fashion'],
-      image: 'https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=900&h=600&fit=crop'
+      image: 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRndLXTBgA3g3ZrAzKElSj-LKFBP2E3TX0uy07oav_M10dJSXIPrcEVocUOVn88EDHegX8JYUCRUV65UcqUBuEadvPb&s=19'
     },
     london: {
       name: 'London',

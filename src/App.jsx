@@ -63,7 +63,7 @@ const locationProfiles = {
     // population: "2.1 million",
     description: "The 'City of Light'. Home to the Eiffel Tower, Louvre and timeless streets.",
     highlights: ["Eiffel Tower", "Louvre Museum", "Notre-Dame"],
-    image: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2940"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRndLXTBgA3g3ZrAzKElSj-LKFBP2E3TX0uy07oav_M10dJSXIPrcEVocUOVn88EDHegX8JYUCRUV65UcqUBuEadvPb&s=19"
   },
   london: {
     name: "London",
@@ -79,7 +79,7 @@ const locationProfiles = {
     // population: "3.3 million",
     description: "Modern skyline, luxury shopping and desert safaris.",
     highlights: ["Burj Khalifa", "Palm Jumeirah", "Dubai Mall"],
-    image: "https://images.unsplash.com/photo-1546412414-8035e1776c9a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2940"
+    image: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxjl92B60lBOjsBhSBcMDifNP25ptI0wDcOasdxIXfWevojIm6inJ-TCaZ2ttidGFtmtKMycDRQXLtZ13oSGD8rdxBRIilt62OPOViAhW9nj9mHuCdryD0RlosuYMnVcwl8wEKx6Q=w1080-h624-n-k-no"
   },
   nyc: {
     name: "New York",
@@ -103,7 +103,7 @@ const locationProfiles = {
     // population: "470k",
     description: "Vibrant coastal city known for beaches, nightlife and art deco architecture.",
     highlights: ["South Beach", "Art Deco District", "Wynwood Walls"],
-    image: "https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRE6LEuEtO9UN3G4R5RViyJrCmnMnXifiwSV9COZJ5ySSVG9QHz3Og_V-QcDcMIXtbcNr194J2LG2Za4PQPxXyZ6dA&s=19"
   },
   "las-vegas": {
     name: "Las Vegas",
@@ -119,7 +119,7 @@ const locationProfiles = {
     // population: "1.4 million",
     description: "Fashion capital of the world and home to stunning gothic architecture.",
     highlights: ["Milan Cathedral", "La Scala", "Fashion District"],
-    image: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcR8TSljz0uel57J5V1aAjc8_k6WGBvXxVkUtw7yQm3WPcDNVapt9sWeGLMo7sGkR88Q4hw3vvfXKbVpsD44JM4hCXk&s=19"
   },
   rome: {
     name: "Rome",
@@ -131,11 +131,11 @@ const locationProfiles = {
   },
   monaco: {
     name: "Monaco",
-    country: "Monaco",
+    country: "Principality of Monaco",
     // population: "39k",
     description: "Luxury playground on the French Riviera known for casinos and yachts.",
-    highlights: ["Monte Carlo Casino", "Prince's Palace", "Port Hercules"],
-    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=900&h=600&fit=crop"
+    highlights: ["Principality of Monaco", "Monte Carlo Casino", "Prince's Palace", "Port Hercules"],
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcScaCyIlRC393IEbxKOkPjxGvliDhFCBwatfWZAAm-CYcmoDGJu4-MKty_XrdxJoxxhZOYb2ze5IAJaoOfUU2Zv4zo&s=19"
   },
   courchevel: {
     name: "Courchevel",
@@ -143,7 +143,7 @@ const locationProfiles = {
     // population: "2k",
     description: "Exclusive ski resort in the French Alps with world-class slopes.",
     highlights: ["Luxury Chalets", "Michelin Dining", "Premier Skiing"],
-    image: "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=900&h=600&fit=crop"
+    image: "https://www.themodeladvocate.com/wp-content/uploads/courchevel-1850-cropped.png"
   },
   megeve: {
     name: "Megève",
@@ -159,7 +159,7 @@ const locationProfiles = {
     // population: "3k",
     description: "Premier ski resort with challenging terrain and vibrant après-ski.",
     highlights: ["Off-Piste Skiing", "Mountain Views", "Nightlife"],
-    image: "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQ0ggXxsA4g-yk_NoRXEtZmDD3n8Hv-v4O4KP8xQUsD5eS6H8oiogGs4OT4pVO9v5UtFoO9lHT91E80KanpqNVSixA&s=19"
   },
   "st-moritz": {
     name: "St Moritz",
@@ -167,7 +167,7 @@ const locationProfiles = {
     // population: "5k",
     description: "Glamorous alpine resort town and birthplace of winter tourism.",
     highlights: ["Luxury Hotels", "Winter Olympics", "Champagne Climate"],
-    image: "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSBHrjlND4tpOAMi8NOqkGp2MrqaGmlU_bAyseO0vwWpiZCK58m_pBNJfw20-la_oKsSD54-sqAOmisGcQXbUEEWrs&s=19"
   },
   aspen: {
     name: "Aspen",
@@ -175,7 +175,7 @@ const locationProfiles = {
     // population: "7k",
     description: "Colorado ski town combining world-class slopes with cultural sophistication.",
     highlights: ["Four Mountains", "Music Festival", "Historic Downtown"],
-    image: "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=900&h=600&fit=crop"
+    image: "https://apioairuxm.cloudimg.io/width/1500/foil1/https://www.skiworld.co.uk/images/uploads/photos/large/ajax_mountain_gondola_3980.jpg"
   },
   "st-barth": {
     name: "St Barth",
@@ -183,7 +183,7 @@ const locationProfiles = {
     // population: "10k",
     description: "Exclusive Caribbean island with pristine beaches and French flair.",
     highlights: ["White Sand Beaches", "Luxury Villas", "French Cuisine"],
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSNgIXmkUD9SmEmrXkKcfyzaLsuo69nSMor0I9ZyBIYCjLbBKCwFF8_D0Ri8nTLKzceKJ6AnQdahhk7gnojHwMhwQg&s=19"
   },
   mykonos: {
     name: "Mykonos",
@@ -191,7 +191,7 @@ const locationProfiles = {
     // population: "10k",
     description: "Iconic Greek island famous for whitewashed buildings and vibrant nightlife.",
     highlights: ["Beach Clubs", "Windmills", "Little Venice"],
-    image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSO6c5Vegu94xNX4EkjZPpXNolcxxNnPhnOuzXTvvVsBUu1hNXfrEOIZTz_qr8UZ0O98YNvnEM4HMOjArQc3FEkbs8&s=19"
   },
   ibiza: {
     name: "Ibiza",
@@ -199,7 +199,7 @@ const locationProfiles = {
     // population: "50k",
     description: "Mediterranean paradise known for stunning sunsets and world-renowned clubs.",
     highlights: ["Beach Clubs", "Old Town", "Sunset Bars"],
-    image: "https://images.unsplash.com/photo-1558642084-fd07fae5282e?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTAGVDXLTlzjCsiARhtOpaa4fFqC2-H88224v9mTfSnRTgsQlVhU-QXQCPRlf89XbWAQ4qFnLPzvzMeoJ-gtp4EKso&s=19"
   },
   "costa-rica": {
     name: "Costa Rica",
@@ -207,7 +207,7 @@ const locationProfiles = {
     // population: "5 million",
     description: "Tropical paradise with lush rainforests, diverse wildlife and pristine beaches.",
     highlights: ["Rainforests", "Volcanoes", "Eco-Tourism"],
-    image: "https://images.unsplash.com/photo-1621962930674-b61b5e5a5190?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTdiRbJJec1hHf8eYqBdVkBtv5F9bl_632HNSdPIBNGYppkk0i_SB0X7m3Qzp4k1G9WPR2vTtqZhYuzUo0cIFz5_xM&s=19"
   },
   thailand: {
     name: "Thailand",
@@ -215,7 +215,7 @@ const locationProfiles = {
     // population: "70 million",
     description: "Land of smiles with golden temples, tropical islands and rich culture.",
     highlights: ["Bangkok Temples", "Island Hopping", "Thai Cuisine"],
-    image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT63g7kJ1BPGJcIzH93JfqtoG7tl0xVXPP78l6AeAWJN8cmXQ1OLi0MUZIJc5CHDByhD930DFriPnG-VAca3YcDeFs&s=19"
   },
   maldives: {
     name: "Maldives",
@@ -223,7 +223,7 @@ const locationProfiles = {
     // population: "540k",
     description: "Tropical island nation with crystal-clear waters and overwater bungalows.",
     highlights: ["Overwater Villas", "Coral Reefs", "Private Islands"],
-    image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT181b7m54eCOSvjCrX_ZbrEudAofGDi8ngYhbOW5HRIV6xDgSRwdS_LMXQau0TYCj4p8NVoocg3ZDmwNcnOASaau0&s=19"
   },
   croatia: {
     name: "Croatia",
@@ -231,7 +231,7 @@ const locationProfiles = {
     // population: "4 million",
     description: "Adriatic gem with ancient cities, stunning coastline and island paradises.",
     highlights: ["Dubrovnik Walls", "Island Hopping", "Historic Cities"],
-    image: "https://images.unsplash.com/photo-1555990538-c3d7a4d0d9f3?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQTlMftK1fXKbuDf2TFqK1REbbX7QOqoOay09-naFb9W-WukLIddNc_EoOOXes-9xRViuC3f8pcoexmnDgLpHvyi3I&s=19"
   },
   bodrum: {
     name: "Bodrum",
@@ -239,14 +239,14 @@ const locationProfiles = {
     // population: "180k",
     description: "Turkish Riviera hotspot with ancient ruins and buzzing beach clubs.",
     highlights: ["Beach Clubs", "Castle", "Marina"],
-    image: "https://images.unsplash.com/photo-1605522324893-378955d0a70f?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTm_Pk5p30RiahmLJCa-Yg4S2Ac9LJym5SqQjr2P1oGp3gh6W8g2-pOPiwQ5j_oogT7glZlGYAcVAoXp5CSktNcMao&s=19"
   },
   bali: {
     name: "Bali",
     country: "Indonesia",
     description: "Island paradise with lush rice terraces, spiritual temples and world-class beaches.",
     highlights: ["Ubud Rice Terraces", "Beach Clubs", "Ancient Temples"],
-    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&h=600&fit=crop"
+    image: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSy8V0s87yV9evPhb7UPEHGcwPqhGHwzHSjUxE4FzquyTuup4XURSkRqPECRbWN3fWPkxpuvc16Yjg6ZLmNYW5BK-I&s=19"
   }
 };
 
