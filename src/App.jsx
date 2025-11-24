@@ -51,7 +51,8 @@ const locationGroups = {
     { name: "Thailand", lat: 13.7563, lng: 100.5018, size: 1.1, color: SOFT_GOLD, id: "thailand" },
     { name: "Maldives", lat: 3.2028, lng: 73.2207, size: 1.0, color: SOFT_GOLD, id: "maldives" },
     { name: "Croatia", lat: 45.1, lng: 15.2, size: 1.0, color: SOFT_GOLD, id: "croatia" },
-    { name: "Bodrum", lat: 37.0344, lng: 27.4306, size: 0.9, color: SOFT_GOLD, id: "bodrum" }
+    { name: "Bodrum", lat: 37.0344, lng: 27.4306, size: 0.9, color: SOFT_GOLD, id: "bodrum" },
+    { name: "Bali", lat: -8.3405, lng: 115.092, size: 1.0, color: SOFT_GOLD, id: "bali" }
   ]
 };
 
@@ -59,7 +60,7 @@ const locationProfiles = {
   paris: {
     name: "Paris",
     country: "France",
-    population: "2.1 million",
+    // population: "2.1 million",
     description: "The 'City of Light'. Home to the Eiffel Tower, Louvre and timeless streets.",
     highlights: ["Eiffel Tower", "Louvre Museum", "Notre-Dame"],
     image: "https://images.unsplash.com/photo-1550340499-a6c60fc8287c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2940"
@@ -67,7 +68,7 @@ const locationProfiles = {
   london: {
     name: "London",
     country: "United Kingdom",
-    population: "9 million",
+    // population: "9 million",
     description: "Historic capital city with major cultural institutions.",
     highlights: ["Buckingham Palace", "British Museum", "Tower Bridge"],
     image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2940"
@@ -75,7 +76,7 @@ const locationProfiles = {
   dubai: {
     name: "Dubai",
     country: "UAE",
-    population: "3.3 million",
+    // population: "3.3 million",
     description: "Modern skyline, luxury shopping and desert safaris.",
     highlights: ["Burj Khalifa", "Palm Jumeirah", "Dubai Mall"],
     image: "https://images.unsplash.com/photo-1546412414-8035e1776c9a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2940"
@@ -83,7 +84,7 @@ const locationProfiles = {
   nyc: {
     name: "New York",
     country: "United States",
-    population: "8+ million",
+    // population: "8+ million",
     description: "The Big Apple. Financial and cultural hub of America.",
     highlights: ["Statue of Liberty", "Central Park", "Times Square"],
     image: "https://images.unsplash.com/photo-1508849789987-4e5333c12b78?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3093"
@@ -91,7 +92,7 @@ const locationProfiles = {
   tokyo: {
     name: "Tokyo",
     country: "Japan",
-    population: "14 million",
+    // population: "14 million",
     description: "Vibrant megacity blending cutting-edge technology, tranquil temples and world-class dining.",
     highlights: ["Shibuya Crossing", "Senso-ji Temple", "Tokyo Tower"],
     image: "https://images.unsplash.com/photo-1549693578-d683be217e58?w=900&h=600&fit=crop"
@@ -99,7 +100,7 @@ const locationProfiles = {
   miami: {
     name: "Miami",
     country: "United States",
-    population: "470k",
+    // population: "470k",
     description: "Vibrant coastal city known for beaches, nightlife and art deco architecture.",
     highlights: ["South Beach", "Art Deco District", "Wynwood Walls"],
     image: "https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=900&h=600&fit=crop"
@@ -107,7 +108,7 @@ const locationProfiles = {
   "las-vegas": {
     name: "Las Vegas",
     country: "United States",
-    population: "650k",
+    // population: "650k",
     description: "Entertainment capital with world-class shows, casinos and nightlife.",
     highlights: ["The Strip", "Bellagio Fountains", "High Roller"],
     image: "https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2948"
@@ -115,7 +116,7 @@ const locationProfiles = {
   milan: {
     name: "Milan",
     country: "Italy",
-    population: "1.4 million",
+    // population: "1.4 million",
     description: "Fashion capital of the world and home to stunning gothic architecture.",
     highlights: ["Milan Cathedral", "La Scala", "Fashion District"],
     image: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=900&h=600&fit=crop"
@@ -123,7 +124,7 @@ const locationProfiles = {
   rome: {
     name: "Rome",
     country: "Italy",
-    population: "2.8 million",
+    // population: "2.8 million",
     description: "The Eternal City with ancient ruins and Renaissance art.",
     highlights: ["Colosseum", "Vatican City", "Trevi Fountain"],
     image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=900&h=600&fit=crop"
@@ -131,7 +132,7 @@ const locationProfiles = {
   monaco: {
     name: "Monaco",
     country: "Monaco",
-    population: "39k",
+    // population: "39k",
     description: "Luxury playground on the French Riviera known for casinos and yachts.",
     highlights: ["Monte Carlo Casino", "Prince's Palace", "Port Hercules"],
     image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=900&h=600&fit=crop"
@@ -139,7 +140,7 @@ const locationProfiles = {
   courchevel: {
     name: "Courchevel",
     country: "France",
-    population: "2k",
+    // population: "2k",
     description: "Exclusive ski resort in the French Alps with world-class slopes.",
     highlights: ["Luxury Chalets", "Michelin Dining", "Premier Skiing"],
     image: "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=900&h=600&fit=crop"
@@ -147,7 +148,7 @@ const locationProfiles = {
   megeve: {
     name: "Megève",
     country: "France",
-    population: "4k",
+    // population: "4k",
     description: "Charming alpine village with medieval architecture and superb skiing.",
     highlights: ["Traditional Village", "Ski Slopes", "Gourmet Restaurants"],
     image: "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=900&h=600&fit=crop"
@@ -155,7 +156,7 @@ const locationProfiles = {
   verbier: {
     name: "Verbier",
     country: "Switzerland",
-    population: "3k",
+    // population: "3k",
     description: "Premier ski resort with challenging terrain and vibrant après-ski.",
     highlights: ["Off-Piste Skiing", "Mountain Views", "Nightlife"],
     image: "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=900&h=600&fit=crop"
@@ -163,7 +164,7 @@ const locationProfiles = {
   "st-moritz": {
     name: "St Moritz",
     country: "Switzerland",
-    population: "5k",
+    // population: "5k",
     description: "Glamorous alpine resort town and birthplace of winter tourism.",
     highlights: ["Luxury Hotels", "Winter Olympics", "Champagne Climate"],
     image: "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=900&h=600&fit=crop"
@@ -171,7 +172,7 @@ const locationProfiles = {
   aspen: {
     name: "Aspen",
     country: "United States",
-    population: "7k",
+    // population: "7k",
     description: "Colorado ski town combining world-class slopes with cultural sophistication.",
     highlights: ["Four Mountains", "Music Festival", "Historic Downtown"],
     image: "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=900&h=600&fit=crop"
@@ -179,7 +180,7 @@ const locationProfiles = {
   "st-barth": {
     name: "St Barth",
     country: "Caribbean",
-    population: "10k",
+    // population: "10k",
     description: "Exclusive Caribbean island with pristine beaches and French flair.",
     highlights: ["White Sand Beaches", "Luxury Villas", "French Cuisine"],
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&h=600&fit=crop"
@@ -187,7 +188,7 @@ const locationProfiles = {
   mykonos: {
     name: "Mykonos",
     country: "Greece",
-    population: "10k",
+    // population: "10k",
     description: "Iconic Greek island famous for whitewashed buildings and vibrant nightlife.",
     highlights: ["Beach Clubs", "Windmills", "Little Venice"],
     image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=900&h=600&fit=crop"
@@ -195,7 +196,7 @@ const locationProfiles = {
   ibiza: {
     name: "Ibiza",
     country: "Spain",
-    population: "50k",
+    // population: "50k",
     description: "Mediterranean paradise known for stunning sunsets and world-renowned clubs.",
     highlights: ["Beach Clubs", "Old Town", "Sunset Bars"],
     image: "https://images.unsplash.com/photo-1558642084-fd07fae5282e?w=900&h=600&fit=crop"
@@ -203,7 +204,7 @@ const locationProfiles = {
   "costa-rica": {
     name: "Costa Rica",
     country: "Costa Rica",
-    population: "5 million",
+    // population: "5 million",
     description: "Tropical paradise with lush rainforests, diverse wildlife and pristine beaches.",
     highlights: ["Rainforests", "Volcanoes", "Eco-Tourism"],
     image: "https://images.unsplash.com/photo-1621962930674-b61b5e5a5190?w=900&h=600&fit=crop"
@@ -211,7 +212,7 @@ const locationProfiles = {
   thailand: {
     name: "Thailand",
     country: "Thailand",
-    population: "70 million",
+    // population: "70 million",
     description: "Land of smiles with golden temples, tropical islands and rich culture.",
     highlights: ["Bangkok Temples", "Island Hopping", "Thai Cuisine"],
     image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=900&h=600&fit=crop"
@@ -219,7 +220,7 @@ const locationProfiles = {
   maldives: {
     name: "Maldives",
     country: "Maldives",
-    population: "540k",
+    // population: "540k",
     description: "Tropical island nation with crystal-clear waters and overwater bungalows.",
     highlights: ["Overwater Villas", "Coral Reefs", "Private Islands"],
     image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900&h=600&fit=crop"
@@ -227,7 +228,7 @@ const locationProfiles = {
   croatia: {
     name: "Croatia",
     country: "Croatia",
-    population: "4 million",
+    // population: "4 million",
     description: "Adriatic gem with ancient cities, stunning coastline and island paradises.",
     highlights: ["Dubrovnik Walls", "Island Hopping", "Historic Cities"],
     image: "https://images.unsplash.com/photo-1555990538-c3d7a4d0d9f3?w=900&h=600&fit=crop"
@@ -235,10 +236,17 @@ const locationProfiles = {
   bodrum: {
     name: "Bodrum",
     country: "Turkey",
-    population: "180k",
+    // population: "180k",
     description: "Turkish Riviera hotspot with ancient ruins and buzzing beach clubs.",
     highlights: ["Beach Clubs", "Castle", "Marina"],
     image: "https://images.unsplash.com/photo-1605522324893-378955d0a70f?w=900&h=600&fit=crop"
+  },
+  bali: {
+    name: "Bali",
+    country: "Indonesia",
+    description: "Island paradise with lush rice terraces, spiritual temples and world-class beaches.",
+    highlights: ["Ubud Rice Terraces", "Beach Clubs", "Ancient Temples"],
+    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&h=600&fit=crop"
   }
 };
 
@@ -262,12 +270,12 @@ export default function App() {
       'Paris': 'France', 'London': 'United Kingdom', 'Dubai': 'United Arab Emirates',
       'Milan': 'Italy', 'Rome': 'Italy', 'Monaco': 'Monaco',
       'Miami': 'United States of America', 'New York': 'United States of America',
-      'Las Vegas': 'United States of America',
+      'Las Vegas': 'United States of America', 'Tokyo': 'Japan',
       'Courchevel': 'France', 'Megève': 'France', 'Verbier': 'Switzerland',
       'St Moritz': 'Switzerland', 'Aspen': 'United States of America',
       'St Barth': 'France', 'Mykonos': 'Greece', 'Ibiza': 'Spain',
       'Costa Rica': 'Costa Rica', 'Thailand': 'Thailand', 'Maldives': 'Maldives',
-      'Croatia': 'Croatia', 'Bodrum': 'Turkey'
+      'Croatia': 'Croatia', 'Bodrum': 'Turkey', 'Bali': 'Indonesia'
     };
     
     return Object.values(locationCountries).includes(countryName);
@@ -394,7 +402,9 @@ export default function App() {
         // `,
         position: "relative",
         minHeight: "100vh",
+        height: "100vh",
         overflow: "auto",
+        overflowX: "hidden",
         width: "100vw",
         fontFamily: "'Nobel','Inter', -apple-system, BlinkMacSystemFont, sans-serif",
         backgroundColor: "#F5F0E9"
@@ -485,8 +495,9 @@ export default function App() {
       {/* Premium Header Card - Responsive positioning */}
       <div style={{
         position: 'fixed',
-        bottom: size[0] < 768 ? '16px' : '32px',
-        left: size[0] < 768 ? '16px' : '32px',
+        top: size[0] < 768 ? '16px' : 'auto',
+        bottom: size[0] < 768 ? 'auto' : '32px',
+        left: size[0] < 768 ? '80px' : '32px',
         right: size[0] < 768 ? '16px' : 'auto',
         maxWidth: size[0] < 768 ? 'none' : '380px',
         width: size[0] < 768 ? 'auto' : 'auto',
@@ -641,19 +652,20 @@ export default function App() {
             }}
             onClick={() => handleFilterClick('islandBeach')}
           >
-            {size[0] < 768 ? '🏝️ Coastal Paradises' : 'Coastal Paradises'}
+            {size[0] < 768 ? '🏝️ Exotic Paradises' : 'Exotic Paradises'}
           </button>
         </div>
       </div>
 
-      {/* Glass Info Card - Top Right (Desktop) / Top Center Horizontal (Mobile) */}
+      {/* Glass Info Card - Top Right (Desktop) / Bottom Center on Mobile */}
       <div style={{
         position: 'fixed',
-        top: size[0] < 768 ? '16px' : '20px',
-        left: size[0] < 768 ? '55%' : 'auto',
+        top: size[0] < 768 ? 'auto' : '20px',
+        bottom: size[0] < 768 ? '16px' : 'auto',
+        left: size[0] < 768 ? '50%' : 'auto',
         right: size[0] < 768 ? 'auto' : '20px',
         transform: size[0] < 768 ? 'translateX(-50%)' : 'none',
-        maxWidth: size[0] < 768 ? 'calc(100vw - 90px)' : '240px',
+        maxWidth: size[0] < 768 ? 'calc(100vw - 32px)' : '240px',
         maxHeight: size[0] < 768 ? 'none' : '60vh',
         overflowX: size[0] < 768 ? 'scroll' : 'visible',
         overflowY: size[0] < 768 ? 'visible' : 'auto',
@@ -680,7 +692,7 @@ export default function App() {
             borderBottom: '1px solid rgba(45, 47, 85, 0.15)',
             paddingBottom: '8px'
           }}>
-            {activeFilter === 'cities' ? 'Metropolitan' : activeFilter === 'winterski' ? 'Alpine Retreats' : 'Coastal Paradises'}
+            {activeFilter === 'cities' ? 'Metropolitan' : activeFilter === 'winterski' ? 'Alpine Retreats' : 'Exotic Paradises'}
           </h3>
         )}
 
@@ -747,19 +759,27 @@ export default function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        zIndex: 1
+        zIndex: 1,
+        pointerEvents: "none"
       }}>
         
         {/* Globe container - direct space view, NASA style */}
-        <div style={{
-          position: 'relative',
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 1
-        }}>
+        <div 
+          style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 1,
+            pointerEvents: "auto"
+          }}
+          onWheel={(e) => {
+            // Allow globe zoom via mouse wheel when hovering over globe
+            e.stopPropagation();
+          }}
+        >
         <Globe
           ref={globeEl}
           width={size[0]}
@@ -921,7 +941,8 @@ export default function App() {
           display: "flex",
           flexDirection: "column",
           gap: size[0] < 768 ? "8px" : "10px",
-          zIndex: 10
+          zIndex: 10,
+          pointerEvents: "auto"
         }}>
           <button
             onClick={() => {
@@ -1014,7 +1035,8 @@ export default function App() {
             overflow: "hidden",
             backdropFilter: "blur(40px)",
             WebkitBackdropFilter: "blur(40px)",
-            border: `1px solid rgba(255,255,255,0.15)`
+            border: `1px solid rgba(255,255,255,0.15)`,
+            pointerEvents: "auto"
           }}>
             <button
               onClick={(e) => {
